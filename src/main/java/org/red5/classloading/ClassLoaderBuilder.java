@@ -314,7 +314,7 @@ public final class ClassLoaderBuilder {
                 }
             }
             if (mode == USE_WAR_LIB) {
-                if (path.isDirectory()) {
+                if (path != null && path.isDirectory()) {
                     File libDir = new File(path, "WEB-INF/lib");
                     // this should not be null but it can happen
                     if (libDir != null && libDir.canRead()) {
